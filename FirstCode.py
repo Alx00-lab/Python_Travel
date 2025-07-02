@@ -1,5 +1,9 @@
+#trying some code...
 
-if 8 > 5:
-    print("8 is greater than 5")
-else:
-    print("8 is not greater than 5")
+correos = ['ejemplo1@gmail.com', 
+           'ejemplo2@dominio.com', 
+           'ejemplo3@hotmail.com', 
+           'ejemplo4@dominio.com']
+
+# Imprimir la lista de correos donde sean solo correos de dominio.com
+print([correo for correo in correos if '@dominio.com' in correo])
