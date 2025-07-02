@@ -20,3 +20,4 @@ Hello! This is the beginning of my Python adventure. My main goals are:
 * Eventually, build an interesting personal project.
 
 I am excited about this path and what I will learn.
+-------------------------------------------------------------------------
