@@ -7,7 +7,7 @@
 * Entender y aplicar conceptos de programación orientada a objetos.
 * Eventualmente, construir un proyecto personal interesante.
 
-Estoy emocionado/a por este camino y por lo que aprenderé.
+Estoy emocionado por este camino y por lo que aprenderé.
 -------------------------------------------------------------------------
 
 # My Python Learning Journey
