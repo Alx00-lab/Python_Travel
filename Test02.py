@@ -1,5 +1,3 @@
-#trying some code...
-
 correos = ['ejemplo1@gmail.com', 
            'ejemplo2@dominio.com', 
            'ejemplo3@hotmail.com', 
