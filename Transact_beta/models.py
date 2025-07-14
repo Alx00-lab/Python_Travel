@@ -1,9 +1,9 @@
 class User:
-    def __init__(self, userID: str, name: str, email: str):
+    def __init__(self, userID: str, name: str, email: str, transactions=None):
         self.userID = userID
         self.name = name
         self.email = email
-        self.transactions = []
+        self.transactions = transactions if transactions is not None else []
         
     def add_Transact(self, transaction):
         if isinstance(transaction, Transaction):
@@ -11,6 +11,13 @@ class User:
             print(f"Transaction added: {transaction}")
         else:
             print("Error: Transaction must be an object of class Transaction.")
+    
+    def total_portfolio(self):
+        total = 0
+        for transct in self.transactions:
+            total += transct.total_value()
+        return total
+    
     
     def __repr__(self):
         return f"ID='{self.userID}', User(Name='{self.name}', Email='{self.email}', Transactions='{self.transactions}')"
@@ -50,30 +57,3 @@ class Transaction:
 
 #End         
 
-#user1 = User("A001", "Alex", "Alex@exmaple.com")
-
-# Create a Asset 
-#activo = Asset("BTC", "Bitcoin", 30000.0)
-
-# Updated Asset
-#activo.updateAsset(4000.0)
-
-# Print 
-#print(activo)
-
-# Create transct
-
-#t1 = Transaction("TX1001", 2, 25.50, "2025-07-11")
-#t2 = Transaction("TX1002", 4, 100.00, "2025-07-12")
-
-#total = t1.total_value() + t2.total_value()
-
-#print(f"Total of both transactions: {total}")
-
-# Add transact to user
-#user1.add_Transact(t1)
-#user1.add_Transact(t2)
-
-# Show me data
-
-#print(user1)
