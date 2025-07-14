@@ -1,5 +1,5 @@
 class User:
-    def __init__(self, userID: int, name: str, email: str):
+    def __init__(self, userID: str, name: str, email: str):
         self.userID = userID
         self.name = name
         self.email = email
@@ -50,30 +50,30 @@ class Transaction:
 
 #End         
 
-user1 = User(1, "Alex", "Alex@exmaple.com")
+#user1 = User("A001", "Alex", "Alex@exmaple.com")
 
 # Create a Asset 
-activo = Asset("BTC", "Bitcoin", 30000.0)
+#activo = Asset("BTC", "Bitcoin", 30000.0)
 
 # Updated Asset
-activo.updateAsset(4000.0)
+#activo.updateAsset(4000.0)
 
 # Print 
-print(activo)
+#print(activo)
 
 # Create transct
 
-t1 = Transaction("TX1001", 2, 25.50, "2025-07-11")
-t2 = Transaction("TX1002", 4, 100.00, "2025-07-12")
+#t1 = Transaction("TX1001", 2, 25.50, "2025-07-11")
+#t2 = Transaction("TX1002", 4, 100.00, "2025-07-12")
 
-total = t1.total_value() + t2.total_value()
+#total = t1.total_value() + t2.total_value()
 
-print(f"Total of both transactions: {total}")
+#print(f"Total of both transactions: {total}")
 
 # Add transact to user
-user1.add_Transact(t1)
-user1.add_Transact(t2)
+#user1.add_Transact(t1)
+#user1.add_Transact(t2)
 
 # Show me data
 
-print(user1)
+#print(user1)
