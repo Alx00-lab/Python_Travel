@@ -1,11 +1,12 @@
+from datetime import datetime
 class User:
-    def __init__(self, userID: str, name: str, email: str, transactions=None):
+    def __init__(self, userID: str, name: str, email: str, transactions: list["Transaction"]| None = None):
         self.userID = userID
         self.name = name
         self.email = email
         self.transactions = transactions if transactions is not None else []
         
-    def add_Transact(self, transaction):
+    def add_Transact(self, transaction: "Transaction") -> float:
         if isinstance(transaction, Transaction):
             self.transactions.append(transaction)
             print(f"Transaction added: {transaction}")
@@ -30,20 +31,20 @@ class Asset:
         self.name = name
         self.actualPrice = actualPrice
     
-    def updateAsset(self, new_Price: float):
+    def updateAsset(self, new_Price: float) -> None:
         if new_Price > 0:
             self.actualPrice = new_Price
             print(f"Actual price updated: {new_Price}")
         else:
             print("Error: new price must be greater than 0")
 
-    def __repr__(self):
+    def __repr__(self) -> str:
          return f"Asset(Simbol={self.simbol}, Name={self.name}, ActualPrice={self.actualPrice})"
 
 
 # Trassaction class
 class Transaction:
-    def __init__(self, transactID: str, cant: int, price: float, date):
+    def __init__(self, transactID: str, cant: int, price: float, date: datetime):
         self.transactID = transactID
         self.cant = cant
         self.price = price
